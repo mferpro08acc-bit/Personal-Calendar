@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Calendar — um calendário para Windows que guarda as tuas notas no próprio computador, com lembretes nativos que aparecem mesmo com a app fechada.">
+  <title>Personal Calendar — o teu calendário, no teu computador</title>
+  <link rel="icon" type="image/png" href="/icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="brand" href="#top">
+      <span class="brand-dot"></span>
+      <span>Personal Calendar</span>
+    </a>
+    <div class="nav-links">
+      <a href="#strengths">Porquê este calendário</a>
+      <a href="#personalization">Claro e escuro</a>
+    </div>
+    <a class="btn btn-primary nav-install" href="/download">Baixar instalador</a>
+  </nav>
+
+  <main>
+
+    <section class="hero" id="top">
+      <div class="hero-text">
+        <span class="badge">Windows 10 / 11 · fica no teu computador</span>
+        <h1>Um calendário para o teu dia,<br><span class="accent">sem dar cabo da cabeça.</span></h1>
+        <p>
+          Anotas uma nota num dia, escolhes a cor, defines o lembrete — e sigues.
+          Tudo guardado só no teu computador. Sem contas, sem nuvem, sem avisos
+          de marketing.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-download" href="/download" id="install-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Instalar
+          </a>
+          <a class="btn btn-ghost" href="#strengths">Como funciona</a>
+        </div>
+        <p class="hero-note" id="dl-note">Ficheiro <code>.exe</code> · ~106&nbsp;MB · instala-se sozinho, sem conta.</p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="shot-card">
+          <img src="screenshot.png" alt="Captura de ecrã do Personal Calendar: calendário mensal com notas coloridas e a lista do dia aberta" class="shot-img">
+          <div class="shot-cap">
+            <span class="shot-dot" style="background:#3b82f6"></span>
+            <span>O dia de hoje, aberto na hora. Notas a cores, lembrete marcado.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="strengths">
+      <h2 class="section-title">Não é uma agenda a mais. <span class="accent">É a tua.</span></h2>
+      <p class="section-sub center">Pequeno por fora, a fazer só o que precisa de fazer. Isto é o que acontece todos os dias com o Personal Calendar.</p>
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <h3>Todo o mês à frente</h3>
+          <p>Os dias cabem todos no ecrã, o de hoje fica destacado e um clique abre as notas do dia. Nada mais.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>
+          </div>
+          <h3>Notas a cores</h3>
+          <p>Cada nota tem a cor que escolhes. Sem pastas, sem categorias, sem etiquetas — só visão rápida do dia.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          </div>
+          <h3>Lembretes que a sério aparecem</h3>
+          <p>Popup do Windows no canto do ecrã, com som, mesmo com a janela fechada. A app fica na bandeja e vigia isto por ti.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3>A importância decide quando avisas</h3>
+          <p>De «só lembrete» a «bastante importante»: o calendário adianta-se 3, 2 ou 1 dia, ou avisa só no próprio dia. Tu escolhes.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+          </div>
+          <h3>Claro e escuro</h3>
+          <p>Um botão muda a app toda — e este site também. A escolha fica guardada, em cada lado, à sua maneira.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+          </div>
+          <h3>Tarefas à parte</h3>
+          <p>Coisas sem data fixa também têm sítio. A lista de tarefas anda consigo, e um toque marca o que já está feito.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reminders">
+      <div class="split">
+        <div>
+          <h2 class="section-title left">Lembretes que <span class="accent">respeitam a importância</span></h2>
+          <p class="section-sub">
+            Cada nota pode avisar-te quando fizer sentido — no próprio dia, ou uns dias antes
+            se for mesmo importante. Também podes desligar o lembrete e deixar a nota quieta.
+          </p>
+          <ul class="check-list">
+            <li>Notas em dias passados ficam a cinzento, para o mês não parecer um arquivo.</li>
+            <li>App fechada? Ao abrir, avisos com até 24&nbsp;horas de atraso recuperam-se.</li>
+            <li>Cada lembrete dispara uma única vez e desaparece do radar.</li>
+          </ul>
+        </div>
+        <div class="table-card">
+          <table class="imp-table">
+            <thead>
+              <tr><th>Nível de importância</th><th>Quando notifica</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="tdot" style="background:#94a3b8"></span>Só lembrete</td><td>No próprio dia</td></tr>
+              <tr><td><span class="tdot" style="background:#60a5fa"></span>Pouco importante</td><td>No próprio dia</td></tr>
+              <tr><td><span class="tdot" style="background:#22c55e"></span>Mais ou menos importante</td><td>1 dia antes + próprio dia</td></tr>
+              <tr><td><span class="tdot" style="background:#f59e0b"></span>Importante</td><td>2 dias antes + próprio dia</td></tr>
+              <tr><td><span class="tdot" style="background:#ef4444"></span>Bastante importante</td><td>3 dias antes + próprio dia</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section note-personal">
+      <div class="personal-card">
+        <span class="personal-quote">“</span>
+        <p>
+          Este é o calendário que eu queria ter: discreto, rápido e que guarda tudo só no meu computador.
+          Faço melhorias quando me aborrece a mim — por isso nunca vai ter publicidade nem contas.
+          Se te servir também, que bom.
+        </p>
+        <span class="personal-sign">— quem o faz usar todos os dias</span>
+      </div>
+    </section>
+
+    <section class="section" id="personalization">
+      <h2 class="section-title">Dá-lhe a tua cara</h2>
+      <p class="section-sub center">Modo claro ou escuro, à escolha. Experimenta aqui — a preferência guarda-se neste dispositivo e, na app, muda-se com um botão.</p>
+
+      <div class="personalization">
+        <div class="theme-picker">
+          <span class="picker-label">Modo do calendário</span>
+          <div class="segmented" role="group" aria-label="Escolher modo do calendário">
+            <button class="seg active" data-theme-pick="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg> Claro</button>
+            <button class="seg" data-theme-pick="dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg> Escuro</button>
+          </div>
+          <span class="picker-hint">A escolha fica guardada só neste browser.</span>
+        </div>
+
+        <div class="mock" id="personalization-preview">
+          <div class="mock-top">
+            <span class="mock-month">setembro 2026</span>
+            <span class="mock-nav">‹ Hoje ›</span>
+          </div>
+          <div class="mock-week"><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span></div>
+          <div class="mock-grid">
+            <span class="m-cell p">1</span><span class="m-cell p">2</span><span class="m-cell p">3</span><span class="m-cell">4</span><span class="m-cell">5</span><span class="m-cell dots d-red">6</span><span class="m-cell">7</span>
+            <span class="m-cell">8</span><span class="m-cell dots d-green">9</span><span class="m-cell">10</span><span class="m-cell">11</span><span class="m-cell">12</span><span class="m-cell">13</span><span class="m-cell">14</span>
+            <span class="m-cell dots d-blue">15</span><span class="m-cell">16</span><span class="m-cell">17</span><span class="m-cell">18</span><span class="m-cell today">19</span><span class="m-cell dots d-amber">20</span><span class="m-cell">21</span>
+            <span class="m-cell">22</span><span class="m-cell dots d-blue">23</span><span class="m-cell">24</span><span class="m-cell">25</span><span class="m-cell">26</span><span class="m-cell dots d-green">27</span><span class="m-cell">28</span>
+            <span class="m-cell">29</span><span class="m-cell">30</span>
+          </div>
+          <div class="mock-note">
+            <span class="mock-dot" style="background:#6366f1"></span>
+            <div>
+              <div class="mock-text">Ver o ensaio da banda</div>
+              <div class="mock-meta">Importante · 2 dias antes às 18:00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="install">
+      <h2 class="section-title">Instalar em 3 passos</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <h3>Baixa o instalador</h3>
+          <p>Clica no botão e guarda o <code>.exe</code> em qualquer pasta. Não instala coisas escondidas.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <h3>Corre-o e está feito</h3>
+          <p>Dois cliques, o assistente anda sozinho e cria o atalho no Iniciar e no ambiente de trabalho.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <h3>Fica perto, discretamente</h3>
+          <p>A app encosta-se à bandeja: fechar a janela não desliga os lembretes. Podes mudar isso nas configurações.</p>
+        </div>
+      </div>
+      <div class="install-cta">
+        <a class="btn btn-primary btn-download" href="/download">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Instalar para Windows
+        </a>
+        <p class="hero-note">Sem registo, sem internet. Os teus dados ficam no teu computador.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span class="brand"><span class="brand-dot"></span> Personal Calendar</span>
+    <span class="footer-note">Feito à mão para Windows · os teus dados ficam no teu computador</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
