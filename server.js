@@ -35,6 +35,18 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  if (pathname === '/download-android') {
+    const url = process.env.DOWNLOAD_ANDROID_URL || 'https://github.com/mferpro08acc-bit/Personal-Calendar/releases/download/v1.0.0/Personal-Calendar-1.0.0-android.apk';
+    if (url) {
+      res.writeHead(302, { Location: url, 'Cache-Control': 'no-store' });
+      res.end();
+      return;
+    }
+    res.writeHead(503, { 'Content-Type': 'text/plain; charset=utf-8' });
+    res.end('APK indisponível de momento. Tenta novamente mais tarde.');
+    return;
+  }
+
   if (pathname === '/icon.png') {
     fs.readFile(path.join(SITE_DIR, 'assets', 'icon.png'), (err, data) => {
       if (err) {
