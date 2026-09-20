@@ -24,7 +24,7 @@ const server = http.createServer((req, res) => {
   }
 
   if (pathname === '/download') {
-    const url = process.env.DOWNLOAD_URL;
+    const url = process.env.DOWNLOAD_URL || 'https://github.com/mferpro08acc-bit/Personal-Calendar/releases/download/v1.0.0/Personal.Calendar-1.0.0-Setup.exe';
     if (url) {
       res.writeHead(302, { Location: url, 'Cache-Control': 'no-store' });
       res.end();
