@@ -111,7 +111,7 @@
       },
 
       /* Início */
-      heroBadge: 'Windows 10/11 · Android · local e privado',
+      heroBadge: 'Versão Beta 1.0.0 · Windows 10/11 · Android · local e privado',
       heroTitleA: 'Um calendário para o teu dia,',
       heroTitleB: 'sem dar cabo da cabeça.',
       heroSub:
@@ -124,6 +124,10 @@
       heroCtaHow: 'Como funciona',
       shotCap: 'O dia de hoje, aberto na hora. Notas a cores, lembrete marcado.',
       shotAlt: 'Captura de ecrã do Easly Life: calendário mensal com notas coloridas e a lista do dia aberta',
+      demoTitle: 'Vê a app em ação',
+      demoText:
+        'Um calendário simples: notas a cores, lembretes que aparecem mesmo com a app fechada, lista de tarefas e notas rápidas.',
+      demoAlt: 'Animação do Easly Life: a percorrer os dias, a criar notas a cores e o lembrete a aparecer',
 
       hlTitle: 'Porquê este calendário?',
       hl: [
@@ -232,21 +236,10 @@
       fallbackReleases: [
         {
           tag_name: 'v1.1.0',
+          name: 'Easly Life · Versão Beta 1.0.0',
           published_at: '2026-10-11T00:00:00Z',
           body:
-            'Novo nome: Easly Life.\n- A aplicação passa a chamar-se Easly Life (Windows e Android), com notificações e bandeja atualizadas.\n- Na primeira abertura, os teus dados da versão anterior são migrados automaticamente.\n- Instaladores novos para Windows e Android.'
-        },
-        {
-          tag_name: 'v1.0.1',
-          published_at: '2026-10-11T00:00:00Z',
-          body:
-            'Correções e melhorias:\n- Notificações: novo botão «Limpar histórico» para limpar todas as notificações de uma vez.\n- Notificações: ao eliminar uma notificação manualmente, o painel mantém-se aberto.\n- Dropdowns (repetição, importância, etc.): já não fecham ao fazer scroll.\n- Dropdowns: interagir com o texto da nota ou abrir campos já não fecha o menu à toa.'
-        },
-        {
-          tag_name: 'v1.0.0',
-          published_at: '2026-09-20T10:57:32Z',
-          body:
-            'Primeira versão pública. Calendário mensal com notas a cores, lembretes nativos com níveis de importância, lista de tarefas, apontamentos, modo claro/escuro, instalação para Windows e Android e contas opcionais com sincronização.'
+            'Versão Beta 1.0.0 do Easly Life.\n- Novo nome: a aplicação passa a chamar-se Easly Life (Windows e Android).\n- Ao abrir pela primeira vez, aparece um guia com uma demonstração de como funciona.\n- Quando há uma versão nova, a app avisa com um popup e liga ao site para descarregar.\n- Correções de notificações e menus, e os dados antigos são migrados automaticamente.'
         }
       ],
 
@@ -312,7 +305,7 @@
         faq: 'FAQ'
       },
 
-      heroBadge: 'Windows 10/11 · Android · local & private',
+      heroBadge: 'Beta 1.0.0 · Windows 10/11 · Android · local & private',
       heroTitleA: 'A calendar for your day,',
       heroTitleB: 'without the hassle.',
       heroSub:
@@ -325,6 +318,10 @@
       heroCtaHow: 'How it works',
       shotCap: 'Today, open in one click. Colourful notes, reminder set.',
       shotAlt: 'Screenshot of Easly Life: monthly calendar with colourful notes and the open day list',
+      demoTitle: 'See the app in action',
+      demoText:
+        'A simple calendar: colourful notes, reminders that fire even with the app closed, a to-do list and quick notes.',
+      demoAlt: 'Animation of Easly Life: going through the days, creating colourful notes and the reminder appearing',
 
       hlTitle: 'Why this calendar?',
       hl: [
@@ -429,21 +426,10 @@
       fallbackReleases: [
         {
           tag_name: 'v1.1.0',
+          name: 'Easly Life · Beta 1.0.0',
           published_at: '2026-10-11T00:00:00Z',
           body:
-            'New name: Easly Life.\n- The app is now called Easly Life (Windows and Android), with updated notifications and tray.\n- On first launch, your data from the previous version migrates automatically.\n- New installers for Windows and Android.'
-        },
-        {
-          tag_name: 'v1.0.1',
-          published_at: '2026-10-11T00:00:00Z',
-          body:
-            'Fixes and improvements:\n- Notifications: new “Clear history” button to remove all notifications at once.\n- Notifications: deleting a notification manually keeps the panel open.\n- Dropdowns (repeat, priority, etc.): no longer close when scrolling.\n- Dropdowns: interacting with note text or opening fields no longer closes the menu accidentally.'
-        },
-        {
-          tag_name: 'v1.0.0',
-          published_at: '2026-09-20T10:57:32Z',
-          body:
-            'First public version. Monthly calendar with colourful notes, native reminders with priority levels, to-do list, quick notes, light/dark mode, Windows and Android installers and optional accounts with sync.'
+            'Easly Life Beta 1.0.0.\n- New name: the app is now called Easly Life (Windows and Android).\n- On first launch, a guide with a demo of how it works appears.\n- When a new version is out, the app shows a popup linking to the site to download it.\n- Fixes to notifications and menus, and old data migrates automatically.'
         }
       ],
 
@@ -526,6 +512,13 @@
       '</div>' +
       '</div>' +
       '</div>' +
+      '<section class="section">' +
+      '<h2 class="section-title">' + esc(L.demoTitle) + '</h2>' +
+      '<p class="section-sub center">' + esc(L.demoText) + '</p>' +
+      '<div class="demo-frame">' +
+      '<img src="demo.gif" alt="' + esc(L.demoAlt) + '" class="demo-img">' +
+      '</div>' +
+      '</section>' +
       '<section class="section">' +
       '<h2 class="section-title">' + esc(L.hlTitle) + '</h2>' +
       '<div class="features">' +
@@ -704,7 +697,7 @@
   }
 
   function updatesCardHtml(r, L, isNewest) {
-    var ver = esc(String(r.tag_name || '').replace(/^v/i, ''));
+    var ver = esc(String(r.name || r.tag_name || '').replace(/^v(?=\d)/i, ''));
     var body = esc((r.body || '').replace(/^[\s\r\n]+/, ''));
     var date = r.published_at
       ? new Date(r.published_at).toLocaleDateString(lang === 'pt' ? 'pt-PT' : 'en-US', { day: '2-digit', month: 'long', year: 'numeric' })
