@@ -7,7 +7,13 @@ const PORT = process.env.PORT || 3000;
 const SITE_DIR = __dirname;
 
 /* ---------- Base de dados de contas (volume /data) ---------- */
-const DATA_DIR = process.env.DATA_DIR || path.join(SITE_DIR, 'data');
+/* Em produção (Railway) há um volume persistente montado em /data e o Railway
+ * expõe RAILWAY_VOLUME_MOUNT_PATH. Usamo-lo automaticamente para que as contas
+ * sobrevivam a deploys/reinícios. Em local cai para <site>/data. */
+const DATA_DIR =
+  process.env.DATA_DIR ||
+  process.env.RAILWAY_VOLUME_MOUNT_PATH ||
+  (process.platform !== 'win32' && fs.existsSync('/data') ? '/data' : path.join(SITE_DIR, 'data'));
 const USERS_FILE = path.join(DATA_DIR, 'users.json');
 const SCRYPT_ITERS = 16384;
 const TOKEN_TTL = 1000 * 60 * 60 * 24 * 90; /* 90 dias */
@@ -327,4 +333,5 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, '0.0.0.0', () => {
   console.log('Easly Life site a correr na porta ' + PORT);
+  console.log('Contas guardadas em: ' + DATA_DIR);
 });
