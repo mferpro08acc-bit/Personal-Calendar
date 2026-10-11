@@ -1,4 +1,4 @@
-/* Personal Calendar — site (site-deploy)
+/* Easly Life - site (site-deploy)
  * Tema claro/escuro, idioma PT/EN, navegação por secções (SPA),
  * downloads (Windows + Android) e atualizações automáticas (GitHub Releases).
  */
@@ -98,9 +98,9 @@
     pt: {
       langLabel: 'Português',
       langToggle: 'EN',
-      metaTitle: 'Personal Calendar — o teu calendário, no teu dispositivo',
+      metaTitle: 'Easly Life — o teu calendário, no teu dispositivo',
       metaDesc:
-        'Personal Calendar — um calendário para Windows e Android que guarda as tuas notas no próprio dispositivo, com lembretes nativos que aparecem mesmo com a app fechada.',
+        'Easly Life — um calendário para Windows e Android que guarda as tuas notas no próprio dispositivo, com lembretes nativos que aparecem mesmo com a app fechada.',
       nav: {
         inicio: 'Início',
         recursos: 'Recursos',
@@ -109,7 +109,6 @@
         atualizacoes: 'Atualizações',
         faq: 'FAQ'
       },
-      navInstall: 'Instalar',
 
       /* Início */
       heroBadge: 'Windows 10/11 · Android · local e privado',
@@ -124,7 +123,7 @@
       heroCtaAndroid: 'Instalar para Android',
       heroCtaHow: 'Como funciona',
       shotCap: 'O dia de hoje, aberto na hora. Notas a cores, lembrete marcado.',
-      shotAlt: 'Captura de ecrã do Personal Calendar: calendário mensal com notas coloridas e a lista do dia aberta',
+      shotAlt: 'Captura de ecrã do Easly Life: calendário mensal com notas coloridas e a lista do dia aberta',
 
       hlTitle: 'Porquê este calendário?',
       hl: [
@@ -138,6 +137,7 @@
       ctaTitle: 'Pronto para organizar o teu dia?',
       ctaSub: 'Escolhe o teu dispositivo e instala em poucos minutos. Sem registo.',
       ctaFoot: 'Sem registo, sem internet. Os teus dados ficam no teu dispositivo.',
+      ctaInstallLink: 'Ver como instalar',
 
       /* Recursos */
       recTitle: 'Tudo o que o calendário faz',
@@ -231,6 +231,12 @@
       updNote: 'A própria app também te avisa quando há uma versão nova.',
       fallbackReleases: [
         {
+          tag_name: 'v1.1.0',
+          published_at: '2026-10-11T00:00:00Z',
+          body:
+            'Novo nome: Easly Life.\n- A aplicação passa a chamar-se Easly Life (Windows e Android), com notificações e bandeja atualizadas.\n- Na primeira abertura, os teus dados da versão anterior são migrados automaticamente.\n- Instaladores novos para Windows e Android.'
+        },
+        {
           tag_name: 'v1.0.1',
           published_at: '2026-10-11T00:00:00Z',
           body:
@@ -294,9 +300,9 @@
     en: {
       langLabel: 'English',
       langToggle: 'PT',
-      metaTitle: 'Personal Calendar — your calendar, on your device',
+      metaTitle: 'Easly Life — your calendar, on your device',
       metaDesc:
-        'Personal Calendar — a calendar for Windows and Android that keeps your notes on your own device, with native reminders that show up even when the app is closed.',
+        'Easly Life — a calendar for Windows and Android that keeps your notes on your own device, with native reminders that show up even when the app is closed.',
       nav: {
         inicio: 'Home',
         recursos: 'Features',
@@ -305,7 +311,6 @@
         atualizacoes: 'Updates',
         faq: 'FAQ'
       },
-      navInstall: 'Install',
 
       heroBadge: 'Windows 10/11 · Android · local & private',
       heroTitleA: 'A calendar for your day,',
@@ -319,7 +324,7 @@
       heroCtaAndroid: 'Install for Android',
       heroCtaHow: 'How it works',
       shotCap: 'Today, open in one click. Colourful notes, reminder set.',
-      shotAlt: 'Screenshot of Personal Calendar: monthly calendar with colourful notes and the open day list',
+      shotAlt: 'Screenshot of Easly Life: monthly calendar with colourful notes and the open day list',
 
       hlTitle: 'Why this calendar?',
       hl: [
@@ -333,6 +338,7 @@
       ctaTitle: 'Ready to organise your day?',
       ctaSub: 'Pick your device and install in a few minutes. No sign-up.',
       ctaFoot: 'No sign-up, no internet needed. Your data stays on your device.',
+      ctaInstallLink: 'See how to install',
 
       recTitle: 'Everything the calendar does',
       recSub: 'Small on the outside, with what you need inside.',
@@ -421,6 +427,12 @@
       updLatest: 'New',
       updNote: 'The app itself also lets you know when there is a new version.',
       fallbackReleases: [
+        {
+          tag_name: 'v1.1.0',
+          published_at: '2026-10-11T00:00:00Z',
+          body:
+            'New name: Easly Life.\n- The app is now called Easly Life (Windows and Android), with updated notifications and tray.\n- On first launch, your data from the previous version migrates automatically.\n- New installers for Windows and Android.'
+        },
         {
           tag_name: 'v1.0.1',
           published_at: '2026-10-11T00:00:00Z',
@@ -538,14 +550,10 @@
       '<span class="personal-sign">' + esc(L.quoteSign) + '</span>' +
       '</div></section>' +
       '<section class="section">' +
-      '<h2 class="section-title">' + esc(L.ctaTitle) + '</h2>' +
       '<p class="section-sub center">' + esc(L.ctaSub) + '</p>' +
-      '<div class="install-cta">' +
-      '<div class="cta-buttons">' +
-      '<a class="btn btn-primary btn-download" href="/download">' + icon('monitor') + esc(L.heroCtaWin) + '</a>' +
-      '<a class="btn btn-primary btn-download btn-android" href="/download-android" target="_blank" rel="noopener">' + icon('phone') + esc(L.heroCtaAndroid) + '</a>' +
-      '</div>' +
-      '<p class="hero-note">' + esc(L.ctaFoot) + '</p>' +
+      '<div class="cta-links">' +
+      '<a class="btn btn-primary" href="#instalar">' + icon('download') + esc(L.ctaInstallLink) + '</a>' +
+      '<a class="btn btn-ghost" href="#faq">' + esc(L.cfLearnFaq) + '</a>' +
       '</div>' +
       '</section>'
     );
@@ -773,8 +781,6 @@
         a.setAttribute('href', '#' + key);
       });
     });
-    var navInstall = $('nav-install');
-    if (navInstall) navInstall.textContent = L.navInstall;
     var langBtn = $('lang-btn');
     if (langBtn) {
       langBtn.textContent = L.langToggle;

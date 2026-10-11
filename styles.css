@@ -151,7 +151,7 @@ a {
 
 .nav-links {
   display: flex;
-  gap: 22px;
+  gap: 24px;
 }
 
 .nav-links a {
@@ -163,11 +163,6 @@ a {
 
 .nav-links a:hover {
   color: var(--text);
-}
-
-.nav-install {
-  padding: 9px 18px;
-  font-size: 14px;
 }
 
 .hero {
@@ -1405,10 +1400,6 @@ html[data-theme="dark"] .icon-moon {
 
   .nav-links a.active {
     background: var(--accent-soft);
-  }
-
-  .nav-install {
-    display: none;
   }
 
   .fab {

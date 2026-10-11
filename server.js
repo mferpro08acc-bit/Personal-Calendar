@@ -267,7 +267,7 @@ const server = http.createServer((req, res) => {
   }
 
   if (pathname === '/download') {
-    const url = process.env.DOWNLOAD_URL || 'https://github.com/mferpro08acc-bit/Personal-Calendar/releases/download/v1.0.0/Personal.Calendar-1.0.0-Setup.exe';
+    const url = process.env.DOWNLOAD_URL || 'https://github.com/mferpro08acc-bit/Personal-Calendar/releases/download/v1.1.0/Easly-Life-1.1.0-Setup.exe';
     if (url) {
       res.writeHead(302, { Location: url, 'Cache-Control': 'no-store' });
       res.end();
@@ -279,7 +279,7 @@ const server = http.createServer((req, res) => {
   }
 
   if (pathname === '/download-android') {
-    const url = process.env.DOWNLOAD_ANDROID_URL || 'https://github.com/mferpro08acc-bit/Personal-Calendar/releases/download/v1.0.0/Personal-Calendar-1.0.0-android.apk';
+    const url = process.env.DOWNLOAD_ANDROID_URL || 'https://github.com/mferpro08acc-bit/Personal-Calendar/releases/download/v1.1.0/Easly-Life-1.1.0-android.apk';
     if (url) {
       res.writeHead(302, { Location: url, 'Cache-Control': 'no-store' });
       res.end();
@@ -325,5 +325,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, '0.0.0.0', () => {
-  console.log('Personal Calendar site a correr na porta ' + PORT);
+  console.log('Easly Life site a correr na porta ' + PORT);
 });
